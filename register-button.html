@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/nano.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="main">
+    <section style="width: 800px;margin-left: auto;margin-right: auto;padding-top: 100px;">
+      <div class="clear-fix">
+        <div class="section_separator level_bg_1 w_arrow_vert_check mt-5">
+          <div class="">
+            <div class="d-grid grid_bar_styles_wrapper grid_10px_gap_form-col align-items-end mb-4 b-reset-picker">
+              <div class="item-grid mb-0">
+                <label>Button text</label>
+                <div class="card-item-k c_pseudoinput">
+                  <div class="d-flex text-center justify-content-between card-body">
+                    <input type="text" placeholder="Register" maxlength="30" class="form-control form-control_blank">
+                  </div>
+                </div>
+              </div>
+              <div class="item-grid mb-0">
+                <label>Fondo Boton</label>
+                <div class="card-item-k c_pseudoinput">
+                  <div id="default-bg-btn-bar" class="d-flex align-items-center justify-content-center card-body" data-bgbtnbar="#000000">
+                    <div id="color-bg-btn-bar"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="item-grid mb-0">
+                <label>Color Boton</label>
+                <div class="card-item-k c_pseudoinput">
+                  <div id="default-color-btn-bar" class="d-flex align-items-center justify-content-center card-body" data-colorbard="#ffffff">
+                    <div id="color-btn-bar"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="item-grid mb-0">
+                <label>Fondo Barra</label>
+                <div class="card-item-k c_pseudoinput">
+                  <div id="default-bg-bar-w" class="d-flex align-items-center justify-content-center card-body" data-bgbar="#2C89B4">
+                    <div id="bg-bar-w"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clear-fix block-preview-bar">
+              <label for="">Vista previa</label>
+              <div id="bgBarra" class="register_bar_preview w-100 mt-4 p-relative wj_theme_light" style="background: rgb(44, 137, 180);">
+                <div class="register_bar_preview_content px-3 pt-3 pb-2">
+                  <div class="row align-items-center">
+                    <div class="col-5">
+                      <ul class="register_bar_preview_schedule_list list-unstyled mb-0">
+                        <li class="mb-2 w-75"></li>
+                        <li class="mb-2 w-50"></li>
+                      </ul>
+                    </div>
+                    <div class="col-7">
+                      <div class="d-flex justify-content-end align-items-start">
+                        <ul class="register_bar_preview_countdown_list list-unstyled mb-0 d-flex align-items-center justify-content-between">
+                          <li class="d-flex flex-column mr-3">
+                            <div class="d-flex justify-content-between">
+                              <span class="d-block h-100"></span>
+                              <span class="h-100"></span>
+                            </div>
+                            <span class="text-center mt-1 font-9 text-uppercase">Days</span>
+                          </li>
+                          <li class="d-flex flex-column mr-3">
+                            <div class="d-flex justify-content-between p-relative">
+                              <span class="d-block h-100"></span>
+                              <span class="h-100"></span>
+                            </div>
+                            <span class="text-center mt-1 font-9 text-uppercase">Hours</span>
+                          </li>
+                          <li class="d-flex flex-column mr-3">
+                            <div class="d-flex justify-content-between p-relative">
+                              <span class="d-block h-100"></span>
+                              <span class="h-100"></span>
+                            </div>
+                            <span class="text-center mt-1 font-9 text-uppercase">Minutes</span>
+                          </li>
+                          <li class="d-flex flex-column">
+                            <div class="d-flex justify-content-between p-relative">
+                              <span class="d-block h-100"></span>
+                              <span class="h-100"></span>
+                            </div>
+                            <span class="text-center mt-1 font-9 text-uppercase">Seconds</span>
+                          </li>
+                        </ul>
+                        <div class="ml-3">
+                          <button id="btnBar" type="button" class="btn btn-rect d-inline-block text-normal border-0 wj_button_theme_light" style="background: rgb(0, 0, 0);">Register</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clear-fix block-generate-code">
+              <label for="">Código</label>
+              <div id="code-generate" class="clear-fix">
+                <textarea readonly="readonly" class="form-control h-1x" onclick="this.focus();this.select()">
+                  <script src="https://leadgods.com/register?buttonText=Register&buttonBgColor=%23000000&buttonBgOpacity=0.5&barBgColor=%2329b6f6&barBgOpacity=0.95&formTemplate=2&formColor=1"></script>
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/pickr.es5.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    code.init();
+  </script>
+</body>
+</html>

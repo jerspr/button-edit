@@ -1,9 +1,9 @@
 var code = {
     init: function(){
-        code.colorsPicker();
+        //code.colorsPicker();
+        code.colorBarra();
     },
     colorsPicker: function(){
-
         /*Click para la seccion color texto y texto del boton*/
         var pickrText = Pickr.create({
             el: "#color_input_text",
@@ -127,5 +127,90 @@ var code = {
             var htmlGenerate = $("#btn-generate").html();
             $("#code-generate textarea").html(htmlGenerate);
         }
+    },
+    colorBarra: function(){
+
+        $(".form-control_blank").on('keydown', function(){
+            var textValue = $(this).val();
+            $("#btnBar").html(textValue);
+            //eventPushCode();
+        });
+        $(".form-control_blank").on('keyup', function(){
+            var textValue = $(this).val();
+            $("#btnBar").html(textValue);
+            //eventPushCode();
+        });
+
+        /*Color para el fondo del boton*/
+        var pickrText = Pickr.create({
+            el: "#color-bg-btn-bar",
+            theme: "nano",
+            comparison: false,
+            default: $("#default-bg-btn-bar").data('bgbtnbar'),
+            components:{
+                preview: true,
+                opacity: true,
+                hue: true,
+                // Input / output Options
+                interaction:{
+                    hex: true,
+                    rgba: true,
+                    input: true
+                }
+            }
+        });
+  
+        pickrText.on("change", function (e) {
+            $("#btnBar").css("background", e.toRGBA());
+            //eventPushCode();
+        });
+
+        /*Color para el color del boton*/
+         var pickrText = Pickr.create({
+            el: "#color-btn-bar",
+            theme: "nano",
+            comparison: false,
+            default: $("#default-color-btn-bar").data('colorbard'),
+            components:{
+                preview: true,
+                opacity: true,
+                hue: true,
+                // Input / output Options
+                interaction:{
+                    hex: true,
+                    rgba: true,
+                    input: true
+                }
+            }
+        });
+  
+        pickrText.on("change", function (e) {
+            $("#btnBar").css("color", e.toRGBA());
+            //eventPushCode();
+        });
+
+        /*Background para el fondo de la barra*/
+        var pickrText = Pickr.create({
+            el: "#bg-bar-w",
+            theme: "nano",
+            comparison: false,
+            default: $("#default-bg-bar-w").data('bgbar'),
+            components:{
+                preview: true,
+                opacity: true,
+                hue: true,
+                // Input / output Options
+                interaction:{
+                    hex: true,
+                    rgba: true,
+                    input: true
+                }
+            }
+        });
+  
+        pickrText.on("change", function (e) {
+            $("#bgBarra").css("background", e.toRGBA());
+            //eventPushCode();
+        });
     }
 }
