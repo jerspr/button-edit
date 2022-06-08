@@ -1,7 +1,11 @@
 var code = {
     init: function(){
-        //code.colorsPicker();
-        code.colorBarra();
+        if($(".block-control-btn").length){
+            code.colorsPicker();
+        }
+        if($(".block-control-bar").length){
+            code.colorBarra();
+        }
     },
     colorsPicker: function(){
         /*Click para la seccion color texto y texto del boton*/
